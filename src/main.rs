@@ -31,7 +31,9 @@ pub fn changer(texte: &mut String) {
 }
 
 
-pub fn avoid_dangling_pointer()-> &String{
+pub fn avoid_dangling_pointer()-> //&
+                                    String{
     let s = String::from("hello");
-    &s
+    //&
+    s
 }
