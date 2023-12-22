@@ -1,5 +1,5 @@
 fn main() {
-    test_error()
+    ownership_range();
 }
 
 pub fn ownership_range(){
@@ -28,4 +28,10 @@ pub fn mutable_reference_test() {
 pub fn changer(texte: &mut String) {
     texte.push_str(", world");
     println!("{}",texte)
+}
+
+
+pub fn avoid_dangling_pointer()-> &String{
+    let s = String::from("hello");
+    &s
 }
