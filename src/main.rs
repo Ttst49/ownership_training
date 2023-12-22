@@ -1,5 +1,5 @@
 fn main() {
-    string_training()
+    test_error()
 }
 
 pub fn ownership_range(){
@@ -16,5 +16,16 @@ pub fn string_training(){
     s1.push_str(" world!");
     let s2 = s1.clone();
     println!("{}, {}",s1,s2)
+}
 
+
+pub fn mutable_reference_test() {
+    let mut s = String::from("hello");
+
+    changer(&mut s);
+}
+
+pub fn changer(texte: &mut String) {
+    texte.push_str(", world");
+    println!("{}",texte)
 }
